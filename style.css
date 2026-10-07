@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #9f9d9d;
+    color: #222;
+}
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background: #eeeeee;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#menuBtn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 25px;
+}
+.home {
+    min-height: 100vh;
+    padding: 100px 10% 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-text {
+    width: 50%;
+}
+
+.hello {
+    color: #c9a227;
+    font-size: 14px;
+}
+
+.home-text h1 {
+    font-size: 55px;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.home-text h1 span {
+    color: #555;
+}
+
+.home-text p:last-of-type {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.home-image {
+    width: 280px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #0e7fb8;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.btn:hover {
+    background: #039122;
+    color: white;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 100px 10% 60px;
+}
+
+.section > h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.about {
+    background: #f4f4f4;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h3 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.about-text > p {
+    max-width: 500px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.info {
+    display: flex;
+    gap: 100px;
+    margin: 35px 0;
+}
+
+.info strong {
+    font-size: 11px;
+}
+
+.info p {
+    color: #777;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.skills {
+    width: 40%;
+}
+
+.skill {
+    margin-bottom: 25px;
+    
+}
+
+.skill span {
+    font-size: 12px;
+   
+}
+
+.progress {
+    height: 100%;
+    background: #333;
+} 
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 80%;
+}
+
+.js {
+    width: 70%;
+
+}
+.figma{
+   width: 60%;
+}
+.Github{
+    width:80%;
+}
+.portfolio {
+    background: #ddd;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.view-btn {
+    background: transparent;
+    border: 1px solid #222;
+    padding: 8px 15px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #222;
+    color: white;
+}
+
+.contact {
+    background: #eeeeee;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #777;
+    background: transparent;
+    padding: 15px 5px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form .btn {
+    width: 150px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: white;
+    font-size: 12px;
+}
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #eee;
+        width: 200px;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    #menuBtn {
+        display: block;
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .home-text {
+        width: 100%;
+    }
+
+    .home-text h1 {
+        font-size: 42px;
+    }
+
+    .home-image {
+        width: 220px;
+        height: 280px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .skills {
+        width: 100%;
+    }
+
+    .info {
+        gap: 40px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}

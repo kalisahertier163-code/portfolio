@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="menuBtn">☰</button>
+    </header>
+    <section id="home" class="home">
+
+        <div class="home-text">
+            <p class="hello">Hello! I'm</p>
+
+            <h1>KALISA<br>
+                <span>Hertier</span>
+            </h1>
+
+            <p>Frontend web developer</p>
+
+            <button class="btn" onclick="scrollToSection('contact')">
+                CONTACT ME
+            </button>
+        </div>
+
+        <div class="home-image">
+            <img src="./kalisa.png"
+                 alt="Profile">
+        </div>
+      
+        
+    </section>
+    <section id="about" class="section about">
+
+        <h2>About Me</h2>
+
+        <div class="about-content">
+
+            <div class="about-text">
+                <h3>ABOUT ME</h3>
+
+                <p>
+                    I’m  beginner web site developer I started in 2026  where I’m developing  program using
+Html ,css and other language  of computer.
+                </p>
+
+                <div class="info">
+                    <div>
+                        <strong>DESIGN</strong>
+                        <p>I can design the site using figma as the 
+way design your need or you want </p>
+                    </div>
+
+                    <div>
+                        <strong>DEVELOPER</strong>
+                        <p>I can design the site using figma as the 
+way design your need or you want </p>
+                    </div>
+                </div>
+
+                <button class="btn">SKILLS</button>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">
+                <span>HTML</span>
+                    <div class="bar">
+                        <div class="progress html"></div>
+                        
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar">
+                        <div class="progress css"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar">
+                        <div class="progress js"></div>
+                    </div>
+                </div>
+                 <div class="skill">
+                    <span>figma</span>
+                    <div class="bar">
+                        <div class="progress figma"></div>
+                    </div>
+                </div>
+                 <div class="skill">
+                    <span>Github</span>
+                    <div class="bar">
+                        <div class="progress Github"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="portfolio" class="section portfolio">
+
+        <h2>Portfolio</h2>
+
+        <div class="portfolio-container">
+
+            <div class="project">
+                <img src="./Screenshot from 2026-09-17 17-53-27.png"
+                     alt="Project 1">
+
+                <div class="project-info">
+                    <h3>Digital Tech Platform</h3>
+                    <p>HTML, CSS & JavaScript</p>
+                    <button class="view-btn">VIEW PROJECT</button>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <img src="./picture girl.png"
+                     alt="Project 2">
+
+                <div class="project-info">
+                    <h3>Dashboard Design</h3>
+                    <p>Web Application</p>
+                    <button class="view-btn">VIEW PROJECT</button>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <img src="./preview.jpg">
+                     alt="Project 3">
+
+                <div class="project-info">
+                    <h3>Creative Website</h3>
+                    <p>Responsive Website</p>
+                    <button class="view-btn">VIEW PROJECT</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="section contact">
+
+        <h2>Contact</h2>
+
+        <div class="contact-container">
+
+            <form id="contactForm">
+
+                <h3>CONTACT ME</h3>
+
+                <input type="text" id="name"
+                       placeholder="Your Name" required>
+
+                <input type="email" id="email"
+                       placeholder="Your Email" required>
+
+                <textarea id="message"
+                          placeholder="Your Message"
+                          required></textarea>
+
+                <button type="submit" class="btn">submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
