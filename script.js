@@ -1,41 +1,44 @@
 
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.querySelector("nav");
 
-menuBtn.addEventListener("click", function () {
-    nav.classList.toggle("active");
-});
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-        behavior: "smooth"
-    });
-}
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
 
-const form = document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
 
-form.addEventListener("submit", function (event) {
-
+contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
+    if (!name || !email || !subject || !message) {
+        formStatus.textContent = "Please fill in all fields.";
         return;
     }
 
-    alert("Thank you " + name + "! Your message has been sent.");
+    const myEmail = "your-email@example.com";
 
-    form.reset()};
+    if (myEmail === "your-email@example.com") {
+        formStatus.textContent =
+            "Set your email address in script.js first.";
+        return;
+    }
 
-const projectButtons = document.querySelectorAll(".view-btn");
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nMessage:\n" + message
+    );
 
-projectButtons.forEach(function (button) {
+    const mailLink =
+        "mailto:" + myEmail +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + body;
 
-    button.addEventListener("click", function () {
-        alert("Project details coming soon!");
-    });
+    formStatus.textContent = "Opening your email application...";
 
+    window.location.href = mailLink;
 });
